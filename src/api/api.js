@@ -1,0 +1,1 @@
+export const callApi = url => fetch(url).then(data => data.json())
