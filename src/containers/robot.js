@@ -37,15 +37,16 @@ class Robo extends Component {
         return (
             <div>
                 <SearchBox searchChange={onSearchChange}/>
+                <Scroll>
                 {
                     isPending ?
                         <h1>...LOADING</h1> :
-                        <Scroll>
-                            <ErrorBoundry>
-                                <CardList robots={filterRobot} />
-                            </ErrorBoundry>
-                        </Scroll>
+                        <ErrorBoundry>
+                            <CardList robots={filterRobot} />
+                        </ErrorBoundry>
+
                 }
+                </Scroll>
             </div>
         )
     }
